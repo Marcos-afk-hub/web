@@ -1,0 +1,289 @@
+:root {
+  --color1: #FFC107; /* Amarillo-Naranjoso */
+  --color2: #0D47A1; /* Azul oscuro */
+  --color3: #ffffff; /* Blanco */
+  --fondo: #F5F5F5;
+  --titulos: 33px;
+  --margenes: 60px;
+  --espacios: 10px;
+  --espacios-contenido: 45px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--fondo);
+  color: #333;
+}
+
+img {
+  vertical-align: top;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.centrado {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #0D47A1;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-facebook div {
+  background: var(--color1);
+}
+
+header {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(to bottom, rgba(13, 71, 161, 0.7), rgba(255, 193, 7, 0.7)), url(img/C1.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.nav1 {
+  background: transparent;
+  height: 80px;
+  color: #333;
+}
+
+.nav2 {
+  background: #fff;
+  height: 100px;
+  color: #000;
+}
+
+.contenedor-nav {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  height: inherit;
+  overflow: hidden;
+}
+
+nav .enlaces a {
+  display: inline-block;
+  padding: 5px 0;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+}
+
+nav .enlaces a:hover {
+  border-bottom: 3px solid var(--color1);
+  transition: 0.6s;
+}
+
+.logo, .logo img {
+  height: 80px;
+}
+
+.icono {
+  display: none;
+  font-size: 24px;
+  padding: 23.5px 20px;
+}
+
+.textos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.textos > h1 {
+  font-size: 80px;
+}
+
+.textos > h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.contenedor {
+  margin: auto;
+  padding: var(--margenes) 0;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contenedor h3 {
+  font-size: var(--titulos);
+  color: var(--color2);
+  margin-bottom: var(--espacios);
+}
+
+.contenedor p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+}
+
+.after::after {
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 100px;
+  height: 2px;
+  background: var(--color2);
+  margin-bottom: var(--espacios-contenido);
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content-card {
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 400px;
+  background: #fff;
+}
+
+.people {
+  height: 80%;
+}
+
+.content-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-team {
+  height: 20%;
+  width: 100%;
+  padding: var(--espacios) 0;
+  background: var(--color1);
+  color: #000;
+}
+
+.about {
+  background: url(img/C2.jpg);
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  color: #fff;
+}
+
+.servicios {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.caja-servicios {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(13, 71, 161, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.botones-work li {
+  border: 1px solid var(--color2);
+  color: var(--color2);
+}
+
+.botones-work li:hover,
+.botones-work .active {
+  background: var(--color2);
+  color: #fff;
+  cursor: pointer;
+}
+
+.cont-work {
+  background: #fff;
+}
+
+.textos-work h4 {
+  color: var(--color2);
+}
+
+footer {
+  background: #0D47A1;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #fff;
+}
+
+.fab {
+  color: var(--color1);
+}
+
+@media screen and (max-width: 700px) {
+  .nav2 {
+    color: #fff;
+  }
+  .icono {
+    display: block;
+    cursor: pointer;
+  }
+  .enlaces {
+    position: fixed;
+    top: 80px;
+    background: #0D47A1;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    width: 0;
+    overflow: hidden;
+  }
+  .enlaces a {
+    background: #1565C0;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content-card,
+  .caja-servicios,
+  .cont-work,
+  .marca-logo {
+    width: 90%;
+  }
+}
