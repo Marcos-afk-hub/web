@@ -3,182 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SMART WARE - Catálogo de Servicios</title>
-    <link rel="stylesheet" href="estilos.css" />
+    <title>SMART WEARE</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-      crossorigin="anonymous"
     />
+    <style>
+      .hero {
+        background-color: #2320aa;
+        color: white;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+      .catalogo .card i {
+        font-size: 3rem;
+        color: #ce6621;
+      }
+      .price-section {
+        background: url("img/costos.jpg") center/cover no-repeat fixed;
+        color: white;
+      }
+      .navbar-brand {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    </style>
   </head>
-  <body class="hidden">
-    <div class="centrado" id="onload">
-      <div class="lds-facebook">
-        <div></div>
-        <div></div>
-        <div></div>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">SMART WEARE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#notificaciones.html">Notificaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aplicaciones.html">Aplicaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#nosotros.html">Sobre Nosotros</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <header>
-      <nav id="nav" class="nav1">
-        <div class="contenedor-nav">
-          <div class="logo1">
-            <h1 style="color: white; font-size: 24px;">SMART WARE</h1>
-          </div>
-          <div class="enlaces" id="enlaces">
-            <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
-            <a href="#equipo" id="enlace-equipo" class="btn-header">Nosotros</a>
-            <a href="#servicio" id="enlace-servicio" class="btn-header">Servicios</a>
-            <a href="#trabajo" id="enlace-trabajo" class="btn-header">Catálogo</a>
-            <a href="#contacto" id="enlace-contacto" class="btn-header">Contacto</a>
-          </div>
-          <div class="icono" id="open">
-            <span>&#9776;</span>
-          </div>
-        </div>
-      </nav>
-      <div class="textos">
-        <h1>SMART WARE</h1>
-        <h2>Solución inteligente para la gestión de almacenes</h2>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold">🔷 BIENVENIDO A SMART WEARE</h1>
+        <p class="lead mt-4">El Sistema de Gestión de Almacenes del Futuro</p>
+        <p class="mb-4">
+          📦📱 Automatiza, controla y potencia tu almacén con nuestro software
+          inteligente, apps integradas, sensores IoT y paneles visuales en
+          tiempo real.
+        </p>
+        <a href="#que-es" class="btn btn-warning btn-lg">Conocer más</a>
       </div>
-    </header>
-    <main>
-      <section class="team contenedor" id="equipo">
-        <h3>Acerca de Nosotros</h3>
-        <p class="after">Tecnología que optimiza la logística y el control de inventarios</p>
-        <div class="card">
-          <div class="content-card">
-            <div class="people">
-              <img src="img/people1.jpg" alt="Equipo 1" />
-            </div>
-            <div class="texto-team">
-              <h4>Equipo Técnico</h4>
-              <p>Ingeniería y soporte de circuitos</p>
-            </div>
-          </div>
-          <div class="content-card">
-            <div class="people">
-              <img src="img/people2.jpg" alt="Equipo 2" />
-            </div>
-            <div class="texto-team">
-              <h4>Desarrollo</h4>
-              <p>Software de gestión inteligente</p>
-            </div>
-          </div>
-          <div class="content-card">
-            <div class="people">
-              <img src="img/people3.jpg" alt="Equipo 3" />
-            </div>
-            <div class="texto-team">
-              <h4>Analistas</h4>
-              <p>Modelado de datos en Oracle</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="about" id="servicio">
-        <div class="contenedor">
-          <h3>Servicios Inteligentes</h3>
-          <p class="after">Automatizamos cada proceso de tu inventario</p>
-          <div class="servicios">
-            <div class="caja-servicios">
-              <img src="img/almacen.png" alt="Almacenes" />
-              <h4>Gestor de Almacenes</h4>
-              <p>Alta de nuevos almacenes distribuidos geográficamente.</p>
-            </div>
-            <div class="caja-servicios">
-              <img src="img/inventario.png" alt="Inventarios" />
-              <h4>Inventarios Digitales</h4>
-              <p>Control de entradas, salidas y pasillos.</p>
-            </div>
-            <div class="caja-servicios">
-              <img src="img/reportes.png" alt="Reportes" />
-              <h4>Reporte de Incidentes</h4>
-              <p>Monitoreo de fallas en tiempo real.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="work contenedor" id="trabajo">
-        <h3>Catálogo de Funciones</h3>
-        <p class="after">Todo lo que SMART WARE puede hacer por ti</p>
-        <div class="galeria-work">
-          <div class="cont-work">
-            <div class="img-work">
-              <img src="img/almacenes.jpg" alt="Ingreso Almacenes" />
-            </div>
-            <div class="textos-work">
-              <h4>Ingreso de almacenes</h4>
-            </div>
-          </div>
-          <div class="cont-work">
-            <div class="img-work">
-              <img src="img/inventarios.jpg" alt="Ingreso Inventarios" />
-            </div>
-            <div class="textos-work">
-              <h4>Ingreso de inventarios</h4>
-            </div>
-          </div>
-          <div class="cont-work">
-            <div class="img-work">
-              <img src="img/pasillos.jpg" alt="Ingreso Pasillos" />
-            </div>
-            <div class="textos-work">
-              <h4>Ingreso de pasillos</h4>
-            </div>
-          </div>
-          <div class="cont-work">
-            <div class="img-work">
-              <img src="img/ubicaciones.jpg" alt="Ubicaciones" />
-            </div>
-            <div class="textos-work">
-              <h4>Gestor de ubicaciones</h4>
-            </div>
-          </div>
-          <div class="cont-work">
-            <div class="img-work">
-              <img src="img/incidentes.jpg" alt="Incidentes" />
-            </div>
-            <div class="textos-work">
-              <h4>Reporte de incidentes</h4>
-            </div>
-          </div>
-          <div class="cont-work">
-            <div class="img-work">
-              <img src="img/entradas.jpg" alt="Entradas" />
-            </div>
-            <div class="textos-work">
-              <h4>Entradas de artículos</h4>
-            </div>
-          </div>
-          <div class="cont-work">
-            <div class="img-work">
-              <img src="img/salidas.jpg" alt="Salidas" />
-            </div>
-            <div class="textos-work">
-              <h4>Salidas de artículos</h4>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer id="contacto">
-      <div class="footer contenedor">
-        <div class="marca-logo">
-          <h2 style="color:white;">SMART WARE</h2>
-        </div>
-        <div class="iconos">
-          <i class="fab fa-youtube"></i>
-          <i class="fab fa-facebook-square"></i>
-          <i class="fab fa-github"></i>
-        </div>
-        <p style="color:white;">Conectamos tus almacenes, conectamos tu productividad</p>
+    </section>
+
+    <!-- ¿Qué es SMART WEARE? -->
+    <section id="que-es" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4">🧠 ¿Qué es SMART WEARE?</h2>
+        <p class="text-center lead">
+          SMART WEARE es una solución integral de gestión de almacenes
+          inteligente, compuesta por software, apps móviles, y hardware con
+          sensores que automatizan cada parte del proceso.
+        </p>
       </div>
-    </footer>
-    <script src="js/jquery.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/filtro.js"></script>
+    </section>
+
+    <!-- Catálogo -->
+    <section id="catalogo" class="py-5 catalogo">
+      <div class="container">
+        <h2 class="text-center mb-4">📦 Catálogo</h2>
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <i class="fab fa-android mb-3"></i>
+                <h5 class="card-title">Gestión con App</h5>
+                <p class="card-text">
+                  Controla tu almacén desde cualquier dispositivo móvil con
+                  nuestra app conectada.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <i class="fas fa-sensor-on mb-3"></i>
+                <h5 class="card-title">Sensores IoT</h5>
+                <p class="card-text">
+                  Sensores inteligentes que detectan entradas, salidas, humedad
+                  y temperatura en tiempo real.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <i class="fas fa-chart-line mb-3"></i>
+                <h5 class="card-title">Dashboard Visual</h5>
+                <p class="card-text">
+                  Visualiza todo el estado del almacén en un panel gráfico y
+                  dinámico.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Precio -->
+    <section id="precio" class="py-5 price-section text-center">
+      <div class="container">
+        <h2 class="mb-4">💰 Planes de Precio</h2>
+        <p class="lead mb-4">
+          Ofrecemos diferentes planes adaptados a tus necesidades, desde
+          almacenes pequeños hasta operaciones de gran escala.
+        </p>
+        <a href="#" class="btn btn-outline-light btn-lg">Ver precios</a>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5 bg-dark text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">📞 Contacto</h2>
+        <p class="mb-2">Teléfono: 48481548</p>
+        <p>Email: contacto@smartweare.com</p>
+        <div class="map-responsive mt-4">
+          <iframe
+            src="https://maps.google.com/maps?q=Mexico&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="220"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
